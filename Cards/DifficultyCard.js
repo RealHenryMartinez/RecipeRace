@@ -7,12 +7,12 @@ import { Button, View, StyleSheet } from 'react-native'
 
 const DifficultyCard = (props) => {
     const handleDifficultyPress = (name, items) => {
-        console.log("tap", name),
+        // console.log("tap", name),
         /* 
         used to navigate throughout different categories of furniture
         navigation is declared in the main component 
         */
-          props.navigation.navigate("SelectedDifficulty", { title: props.titleName });
+          props.navigation.navigate(props.titleName, { title: props.titleName });
       };
   return (
     <View>

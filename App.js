@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import DifficultyStack from './Stacks/DifficultyStack';
+import AllHomeTabStack from './Stacks/AllHomeTabStack';
 
 const Tabs = createBottomTabNavigator();
 
@@ -17,7 +17,7 @@ export default function App() {
           <Tabs.Screen
             options={{ headerShown: false }} // hides 'Home' header
             name="Difficulty"
-            component={DifficultyStack}
+            component={AllHomeTabStack}
           />
         </Tabs.Navigator>
       </NavigationContainer>

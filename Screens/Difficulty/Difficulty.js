@@ -11,7 +11,7 @@ const Difficulty = ({ navigation }) => {
     <View>
         <DifficultyCard navigation={navigation} titleName="Beginner" />
         <DifficultyCard navigation={navigation} titleName="Intermediate" />
-        <DifficultyCard navigation={navigation} titleName="Advanced" />
+        <DifficultyCard navigation={navigation} titleName="Advance" />
     </View>
   )
 }

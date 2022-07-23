@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import AllHomeTabStack from './Stacks/AllHomeTabStack';
+import CameraScreen from './Screens/CameraShot/CameraScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -18,6 +19,12 @@ export default function App() {
             options={{ headerShown: false }} // hides 'Home' header
             name="Difficulty"
             component={AllHomeTabStack}
+          />
+
+          <Tabs.Screen
+            options={{ headerShown: false }} // hides 'Home' header
+            name="Camera"
+            component={CameraScreen}
           />
         </Tabs.Navigator>
       </NavigationContainer>

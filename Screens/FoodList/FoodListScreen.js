@@ -6,7 +6,9 @@ const FoodListScreen = ({navigation, route}) => {
 
   console.log(route.params.category)
   return (
+    // Food Lists that one can cook
     <>
+    {/* Making a list of columns that include foods after going through Difficulty  */}
       <FlatList
         numColumns={2}
         columnWrapperStyle = {styles.row}
@@ -21,7 +23,7 @@ const FoodListScreen = ({navigation, route}) => {
         renderItem={({ item }) => (
           <TouchableOpacity 
               style = {{backgroundColor: 'grey', height: 100, width: 100, borderRadius: 20}}
-              // onPress = {() => navigation.navigate('FoodList', item)}
+              onPress = {() => navigation.navigate('RecipeList', item)}
               >
             {/* Display the name of the category ons the top of the screen */}
             <Text style = {{color: 'white', alignSelf:'center'}}> {item.name} </Text>
@@ -42,7 +44,7 @@ const styles = StyleSheet.create({
   },
   label: {
     backgroundColor: 'light-grey',
-    
+
   }
 })
 

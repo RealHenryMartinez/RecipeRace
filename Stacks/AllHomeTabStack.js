@@ -2,8 +2,9 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+
+import RecipeListScreen from '../Screens/RecipeList/RecipeListScreen';
 import FoodListScreen from '../Screens/FoodList/FoodListScreen';
-import SelectedDifficulty from '../Screens/SelectedDifficulty/SelectedDifficulty';
 import Difficulty from '../Screens/Difficulty/Difficulty';
 import Beginner from '../Screens/Difficulty/Beginner';
 import Intermediate from '../Screens/Difficulty/Intermediate';
@@ -19,6 +20,7 @@ const Stack = createNativeStackNavigator();
 */
 const AllHomeTabStack = () => {
   return (
+    // HERE IS ALL THE "STACK TABS" for each part of the HOME TAB //
       <Stack.Navigator>
         <Stack.Screen 
           name="Difficulty" 
@@ -39,11 +41,12 @@ const AllHomeTabStack = () => {
             options={({ route }) => ({ title: route.params.title })} 
             name="FoodList" 
             component={FoodListScreen} />
-        
-        <Stack.Screen 
-          name="SelectedDifficulty"
-          options={({ route }) => ({ title: route.params.title })} 
-          component={SelectedDifficulty} />
+
+        <Stack.Screen
+          // options={({ route }) => ({ title: route.params.title })} 
+          name="RecipeList" 
+          component={RecipeListScreen} 
+        />
       </Stack.Navigator>
   )
 }

@@ -64,6 +64,13 @@ const Intermediate = ({navigation}) => {
     <View style = {{flex: 1}}>
         <FlatList
             data = {categories}
+
+            ListHeaderComponent = {
+                <>
+                  <Text style = {{alignSelf: 'center'}}> Intermediate </Text>
+                </>
+              }
+
             columnWrapperStyle = {styles.row}
             numColumns = {2}
             renderItem={({ item }) => (

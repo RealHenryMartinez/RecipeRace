@@ -21,7 +21,7 @@ const RecipeListScreen = ({navigation, route}) => {
             
             renderItem={({ item }) => (
                 <View>
-                    {/* Display the name of the category ons the top of the screen */}
+                    {/* Display the name of the ingredients ons the top of the screen */}
                     <Text style = {{color: 'black'}}> {item} </Text>
                     
                 </View>

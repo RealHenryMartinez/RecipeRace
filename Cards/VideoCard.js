@@ -1,21 +1,21 @@
-import React from "react";
-import { Text, FlatList, View} from 'react-native'
+import React from 'react'
+import { Text, FlatList, View} from 'react-dom'
 
-export default function VideoCard({route}) {
+const VideoCard = ({route, navigation}) => {
   return (
     <>
     <FlatList 
             style = {{alignContent: 'center'}}
             
     // Route.params.ingredients is going to the child of the route onto it reaches ingredients
-            data = {route.params.recepies}
+            data = {route.params.video}
             
             renderItem={({ item }) => (
                 <View>
                     {/* Display the name of the category ons the top of the screen */}
                     <iframe
                         // data = {route.params.recepies}
-                        src={route.params.video}
+                        src={item}
                         frameborder="0"
                         allow="autoplay; encrypted-media"
                         allowfullscreen
@@ -27,11 +27,7 @@ export default function VideoCard({route}) {
               )} 
         />
     </>
-    // <div
-    
-    // >
-
-      
-    // </div>
-  );
+  )
 }
+
+export default VideoCard

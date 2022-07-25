@@ -3,6 +3,8 @@ import {Text, View, TouchableHighlight, TouchableOpacity, FlatList, StyleSheet} 
 // import { FlatList } from 'react-native-web'
 // import { View } from 'react-native-web'
 
+
+
 const Beginner = ({navigation}) => {
     const [categories, setCategories] = React.useState([
     {
@@ -10,7 +12,8 @@ const Beginner = ({navigation}) => {
         recepies: [
             {
                 name: 'EGG Cake',
-                ingredients: ['milk', 'carrot', 'sugar', 'spices', 'more carrots', 'plate']
+                ingredients: ['milk', 'carrot', 'sugar', 'spices', 'more carrots', 'plate'],
+                video: "https://www.youtube.com/watch?v=T59N3DPrvac"
             },
             {
                 name: 'rice and eggs',
@@ -24,6 +27,7 @@ const Beginner = ({navigation}) => {
             {
                 name: 'Le Pear Cake',
                 ingredients: ['milk', 'apple', 'sugar', 'spices', 'more appple', 'plate']
+                
             },
             {
                 name: 'Pear mash',

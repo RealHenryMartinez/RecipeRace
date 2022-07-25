@@ -9,6 +9,11 @@ import Difficulty from '../Screens/Difficulty/Difficulty';
 import Beginner from '../Screens/Difficulty/Beginner';
 import Intermediate from '../Screens/Difficulty/Intermediate';
 import Advance from '../Screens/Difficulty/Advance';
+import VideoScreen from '../Screens/CookingOptions/VideoScreen';
+import BothOptionsScreen from '../Screens/CookingOptions/BothOptionsScreen';
+import RecipeTextScreen from '../Screens/CookingOptions/RecipeTextScreen';
+
+import CookingOptionsScreen from '../Screens/CookingOptions/CookingOptionsScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -47,7 +52,31 @@ const AllHomeTabStack = () => {
           name="RecipeList" 
           component={RecipeListScreen} 
         />
+
+        {/* COOKING OPTION SECTION */}
+        <Stack.Screen
+          // options={({ route }) => ({ title: route.params.title })} 
+          name="CookingOptions" 
+          component={CookingOptionsScreen}
+        />
+        <Stack.Screen
+          // options={({ route }) => ({ title: route.params.title })} 
+          name="Video" 
+          component={VideoScreen} 
+        />
+        <Stack.Screen
+          // options={({ route }) => ({ title: route.params.title })} 
+          name="Both" 
+          component={BothOptionsScreen} 
+        />
+        <Stack.Screen
+          // options={({ route }) => ({ title: route.params.title })} 
+          name="RecipeText" 
+          component={RecipeTextScreen} 
+        />
+        
       </Stack.Navigator>
+      
   )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, FlatList, View } from 'react-native'
+import { Text, FlatList, View, Button, TouchableOpacity } from 'react-native'
 
 const RecipeListScreen = ({navigation, route}) => {
     console.log(route.params.ingredients)
@@ -23,11 +23,21 @@ const RecipeListScreen = ({navigation, route}) => {
                 <View>
                     {/* Display the name of the category ons the top of the screen */}
                     <Text style = {{color: 'black'}}> {item} </Text>
-                
+                    
                 </View>
+                
               )} 
         />
-        
+        <View style = {{alignSelf:'center' }}>
+          <TouchableOpacity 
+                style = {{backgroundColor: 'grey', height: 50, width: 100, borderRadius: 20}}
+                onPress = {() => navigation.navigate('CookingOptions')}
+                >
+              {/* Display the name of the category ons the top of the screen */}
+              <Text style = {{color: 'white', alignSelf:'center' , justifyContent: 'center' , alignContent: 'center', alignItems: 'center' }}> ready to cook? </Text>
+              
+            </TouchableOpacity>
+        </View>
     </>
   )
 }

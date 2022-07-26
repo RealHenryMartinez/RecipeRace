@@ -6,14 +6,16 @@ import { Button, View, StyleSheet } from 'react-native'
 // Difficulty button (function) -> passed to Difficulty.js
 
 const CookingOptionsCard = (props) => {
+
     const handleDifficultyPress = (name, items) => {
         // console.log("tap", name),
         /* 
         used to navigate throughout different categories of furniture
         navigation is declared in the main component 
         */
-          props.navigation.navigate(props.optionName, { title: props.optionName });
+          props.navigation.navigate(props.optionName, { title: props.optionName, data: props.data, dataTwo: props.dataTwo });
       };
+
   return (
     <View>
         <Button style={styles.container} onPress={handleDifficultyPress} title={props.optionName}/>

@@ -1,19 +1,26 @@
-import React from 'react'
-import { Text, FlatList, View} from 'react-native'
-import { WebView } from 'react-native-webview';
+import React, {useState, useCallback} from "react";
+import { Button, View, Alert } from "react-native";
+import YoutubePlayer from "react-native-youtube-iframe";
 
+const VideoCard = ({ route, }) => {
+  const [playing, setPlaying] = useState(false);
 
-const VideoCard = ({route, navigation}) => {
-    const {video} = route.params
+  const onStateChange = useCallback((state) => {
+    if (state === "ended") {
+      setPlaying(false);
+    }
+  }, []);
 
   return (
     <>
-            
-            {/* Display the name of the ingredients ons the top of the screen */}
-            <WebView
-        
-            source={{uri: `https://www.youtube.com/embed/${video}`}} />
+      {/* Display the name of the ingredients ons the top of the screen */}
+      <YoutubePlayer
+        height={300}
+        play={playing}
+        videoId={route.params.data}
+        onChangeState={onStateChange}
+      />
     </>
-        )
-}
-export default VideoCard
+  );
+};
+export default VideoCard;

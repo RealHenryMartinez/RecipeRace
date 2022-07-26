@@ -14,14 +14,15 @@ const Beginner = ({navigation}) => {
         recepies: [
             {
                 name: 'EGG Cake',
-                ingredients: ['milk', 'carrot', 'sugar', 'spices', 'more carrots', 'plate'],
-                
-                video: "8PhdfcX9tG0"
+                ingredients: ['milk', 'carrot', 'sugar', 'spices', 'more carrots', 'plate'],   
+                video: "8PhdfcX9tG0",
+                recipe: ["1. Begin to cook", "2. Begin to boil"],
             },
             {
                 name: 'rice and eggs',
                 ingredients: ['any', 'something', 'carrot'],
-                video: <VideoCard embedId="rokGy0huYEA" />
+                video: "rokGy0huYEA",
+                recipe: ["1. Begin to cook", "2. Begin to boil"],
             }
         ]       
     },

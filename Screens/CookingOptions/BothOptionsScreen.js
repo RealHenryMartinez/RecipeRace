@@ -1,14 +1,21 @@
 import React from 'react'
 import { Text } from 'react-native'
 
-const BothOptionsScreen = () => {
+import VideoCard from '../../Cards/VideoCard'
+import RecipeTextScreen from './RecipeTextScreen'
+
+const BothOptionsScreen = ({route}) => {
+
 
 
 
 
 
   return (
-    <Text>Both Options</Text>
+    <>
+      <VideoCard route={route}/>
+      <RecipeTextScreen route={route} />
+    </>
   )
 }
 

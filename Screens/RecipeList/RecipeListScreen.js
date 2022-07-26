@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, FlatList, View, Button, TouchableOpacity } from 'react-native'
 
 const RecipeListScreen = ({navigation, route}) => {
-    console.log(route.params.ingredients)
+    console.log(route.params)
   return (
     
     <>
@@ -31,7 +31,7 @@ const RecipeListScreen = ({navigation, route}) => {
         <View style = {{alignSelf:'center' }}>
           <TouchableOpacity 
                 style = {{backgroundColor: 'grey', height: 50, width: 100, borderRadius: 20}}
-                onPress = {() => navigation.navigate('CookingOptions')}
+                onPress = {() => navigation.navigate('CookingOptions', route.params)}
                 >
               {/* Display the name of the category ons the top of the screen */}
               <Text style = {{color: 'white', alignSelf:'center' , justifyContent: 'center' , alignContent: 'center', alignItems: 'center' }}> ready to cook? </Text>

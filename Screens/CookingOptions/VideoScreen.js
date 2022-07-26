@@ -1,20 +1,12 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text, View } from 'react-native'
 import VideoCard from '../../Cards/VideoCard'
 
-const VideoScreen = () => {
+const VideoScreen = ({route, navigation}) => {
   return (
- 
-      <div>
-        <iframe
-                        // data = {route.params.recepies}
-                        src="https://www.youtube.com/embed/T59N3DPrvac"
-                        frameborder="0"
-                        allow="autoplay; encrypted-media"
-                        allowfullscreen
-                        title="video"
-                    />{" "}
-      </div>
+    <View>
+      <VideoCard embedId={route.params.video} />
+    </View>
 
   )
 }

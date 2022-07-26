@@ -14,6 +14,7 @@ import BothOptionsScreen from '../Screens/CookingOptions/BothOptionsScreen';
 import RecipeTextScreen from '../Screens/CookingOptions/RecipeTextScreen';
 
 import CookingOptionsScreen from '../Screens/CookingOptions/CookingOptionsScreen';
+import VideoCard from '../Cards/VideoCard';
 
 
 const Stack = createNativeStackNavigator();

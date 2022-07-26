@@ -1,5 +1,6 @@
 import React from 'react'
 import {Text, View, TouchableHighlight, TouchableOpacity, FlatList, StyleSheet} from 'react-native'
+import VideoCard from '../../Cards/VideoCard'
 // import { FlatList } from 'react-native-web'
 // import { View } from 'react-native-web'
 
@@ -8,16 +9,19 @@ import {Text, View, TouchableHighlight, TouchableOpacity, FlatList, StyleSheet} 
 const Beginner = ({navigation}) => {
     const [categories, setCategories] = React.useState([
     {
+        
         category: "Egg",
         recepies: [
             {
                 name: 'EGG Cake',
                 ingredients: ['milk', 'carrot', 'sugar', 'spices', 'more carrots', 'plate'],
-                video: "https://www.youtube.com/watch?v=T59N3DPrvac"
+                
+                video: "8PhdfcX9tG0"
             },
             {
                 name: 'rice and eggs',
-                ingredients: ['any', 'something', 'carrot']
+                ingredients: ['any', 'something', 'carrot'],
+                video: <VideoCard embedId="rokGy0huYEA" />
             }
         ]       
     },

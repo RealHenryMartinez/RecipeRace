@@ -10,7 +10,7 @@ import VideoCard from '../../Cards/VideoCard'
 const Beginner = ({navigation}) => {
 
 // ADDING FOOD OPTIONS FOR THE FOOD CATEGORY
-let Food1 = require('../../assets/Food/crispy-fried-egg-recipe 1.png');
+let Food1 = require('../../assets/crispy-fried-egg-recipe.png');
 
 
 
@@ -18,11 +18,12 @@ let Food1 = require('../../assets/Food/crispy-fried-egg-recipe 1.png');
     {
         
         category: "Egg",
+        image: Food1,
         recepies: [
             {
                 name: 'EGG Cake',
                 ingredients: ['milk', 'carrot', 'sugar', 'spices', 'more carrots', 'plate'],
-                image: Food1,
+                
                 video: "8PhdfcX9tG0",
                 recipe: ["1. Begin to cook", "2. Begin to boil"],
             },
@@ -144,11 +145,29 @@ let Food1 = require('../../assets/Food/crispy-fried-egg-recipe 1.png');
             numColumns = {2}
             renderItem={({ item }) => (
                 <TouchableOpacity 
-                    style = {{backgroundColor: 'grey', height: 100, width: 100, borderRadius: 20}}
+                    style = {{
+                        backgroundColor: 'grey', 
+                        height: 164, 
+                        width: 188, 
+                        borderRadius: 10, 
+                        backgroundColor: '#5BBEB3', 
+                        borderColor: '#5BBEB3'}}
                     onPress = {() => navigation.navigate('FoodList', item)}>
                   {/* Display the name of the category ons the top of the screen */}
-                  {/* <Image source= { item.image } /> */}
-                  <Text style = {{color: 'white', alignSelf:'center'}}> {item.category} </Text>
+                  <Image source = { item.image } style = {{
+                        width: 188, 
+                        height: 126, 
+                        borderRadius: 10, 
+                        borderWidth: 2, 
+                        borderColor: '#5BBEB3',
+                        borderBottomLeftRadius: 0,
+                        borderBottomRightRadius: 0,
+                    }} />
+                  <Text style = {{
+                            color: 'white', 
+                            alignSelf:'center',
+                            
+                                }}> {item.category} </Text>
                 </TouchableOpacity>
               )}
         />

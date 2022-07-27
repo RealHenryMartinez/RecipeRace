@@ -25,7 +25,7 @@ const AllHomeTabStack = () => {
   return (
     // HERE IS ALL THE "STACK TABS" for each part of the HOME TAB //
     <Stack.Navigator>
-      <Stack.Screen name="Difficulty" component={Difficulty} />
+      <Stack.Screen name="Difficulty" component={Difficulty}  />
       <Stack.Screen name="Beginner" component={Beginner} />
       <Stack.Screen name="Intermediate" component={Intermediate} />
       <Stack.Screen name="Advance" component={Advance} />

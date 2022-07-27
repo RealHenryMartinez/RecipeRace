@@ -30,7 +30,8 @@ export default Difficulty
 const styles = StyleSheet.create({
     buttonstyles: {
         justifyContent: 'center',
-        alignSelf: 'center'
+        alignSelf: 'center',
+
 
     },
     space: {
@@ -39,6 +40,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         padding: 20,
         alignSelf: 'center'
+        
     }
   });
   

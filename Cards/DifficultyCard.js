@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, View, StyleSheet } from 'react-native'
+import { Button, View, StyleSheet, TouchableOpacity, Text } from 'react-native'
 
 
 // This is the functionality of the buttons 
@@ -15,8 +15,10 @@ const DifficultyCard = (props) => {
           props.navigation.navigate(props.titleName, { title: props.titleName });
       };
   return (
-    <View>
-        <Button style={styles.container} onPress={handleDifficultyPress} title={props.titleName}/>
+    <View style={{marginTop: 80}}>
+        <TouchableOpacity color='#5BBEB3' style={styles.touch} onPress={handleDifficultyPress} title={props.titleName}>
+          <Text style={{color: 'white'}}>{props.titleName}</Text>
+        </TouchableOpacity>
         
     </View>
   )
@@ -25,6 +27,20 @@ const DifficultyCard = (props) => {
 export default DifficultyCard
 
 const styles = StyleSheet.create({
+    touch: {
+      width: 234,
+      alignItems: 'center',
+      height: 64,
+      borderRadius: 15,
+      elevation: 1,
+      justifyContent: "center",
+      marginHorizontal: -20,
+      flexDirection: 'row',
+      display: 'flex',
+      backgroundColor: '#5BBEB3',
+      
+
+    },
     container: {
         padding: 20,
           backgroundColor: '#48d1cc',

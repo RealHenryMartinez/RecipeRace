@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native'
+import { Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native'
 // import { FlatList } from 'react-native-web'
 
 const FoodListScreen = ({navigation, route}) => {
@@ -17,16 +17,41 @@ const FoodListScreen = ({navigation, route}) => {
 
         ListHeaderComponent = {
           <>
-            <Text style = {{alignSelf: 'center'}}> {route.params.category} </Text>
+            <Text style = {{
+              alignSelf: 'center',
+              marginTop: 60,
+              fontSize: 28,
+            }}> {route.params.category} </Text>
           </>
         }
         renderItem={({ item }) => (
           <TouchableOpacity 
-              style = {{backgroundColor: 'grey', height: 100, width: 100, borderRadius: 20}}
+              style = {{ 
+                        height: 164, 
+                        width: 188, 
+                        borderRadius: 10, 
+                        backgroundColor: '#5BBEB3', 
+                        borderColor: '#5BBEB3'
+              }}
               onPress = {() => navigation.navigate('RecipeList', item)}
               >
+            <Image source = { item.imagerecipe } style = {{
+                       width: 188, 
+                       height: 126, 
+                       borderRadius: 10, 
+                       borderWidth: 2, 
+                       borderColor: '#5BBEB3',
+                       borderBottomLeftRadius: 0,
+                       borderBottomRightRadius: 0,
+                    }} />
             {/* Display the name of the category ons the top of the screen */}
-            <Text style = {{color: 'white', alignSelf:'center'}}> {item.name} </Text>
+            <Text style = {{
+              color: 'white', 
+              alignSelf:'flex-start',
+              marginTop: 7,
+              }}>
+                 {item.name} 
+            </Text>
             
           </TouchableOpacity>
         )} 

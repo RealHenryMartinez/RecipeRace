@@ -9,11 +9,24 @@ import VideoCard from '../../Cards/VideoCard'
 
 const Beginner = ({navigation}) => {
 
-// ADDING FOOD OPTIONS FOR THE FOOD CATEGORY
+// ADDING CATEGORY FOOD IMAGES
 let Food1 = require('../../assets/crispy-fried-egg-recipe.png');
+let Food2 = require('../../assets/ceviche-de-camaron.png');
+let Food3 = require('../../assets/Molé.png');
+let Food4 = require('../../assets/Quesadilla.png');
+let Food5 = require('../../assets/Creamy-Tomato-Spinach-Pasta-close.png');
+let Food6 = require('../../assets/cereal.png');
+
+// ADDING FOOD IMAGES FOR FOOD LIST
+let Food7 = require('../../assets/Oaxaca-M-Q.png');
+let Food8 = require('../../assets/basic-Q.png');
+let Food9 = require('../../assets/fancy-Q.png');
+let Food10 = require('../../assets/cali-mex-quesadillas.png');
+let Food11 = require('../../assets/Veggie-Q.png');
+let Food12 = require('../../assets/spicy-chicken-quesadilla-menuitem.png');
 
 
-
+// ADDING FOOD OPTIONS FOR THE FOOD CATEGORY
     const [categories, setCategories] = React.useState([
     {
         
@@ -36,7 +49,8 @@ let Food1 = require('../../assets/crispy-fried-egg-recipe.png');
         ]       
     },
     {
-        category: 'Pear',
+        category: 'Ceviche',
+        image: Food2,
         recepies: [
             {
                 name: 'Le Pear Cake',
@@ -50,7 +64,8 @@ let Food1 = require('../../assets/crispy-fried-egg-recipe.png');
         ]
     },
     {
-        category: 'Sanwich',
+        category: 'Molé',
+        image: Food3,
         recepies: [
             {
                 name: 'PB&J',
@@ -63,20 +78,44 @@ let Food1 = require('../../assets/crispy-fried-egg-recipe.png');
         ]
     },
     {
-        category: 'bread',
+        category: 'Quesadillas',
+        image: Food4,
         recepies: [
             {
-                name: 'bread Cake',
-                ingredients: ['milk', 'bread', 'sugar', 'spices', 'more bread', 'plate']
+                name: 'oaxaca quesadilla',
+                ingredients: ['milk', 'bread', 'sugar', 'spices', 'more bread', 'plate'],
+                imagerecipe: Food7,
             },
             {
-                name: 'something else',
-                ingredients: ['any', 'something', 'bread']
-            }
+                name: 'cheese quesadilla',
+                ingredients: ['any', 'something', 'bread'],
+                imagerecipe: Food8,
+            },
+            {
+                name: 'bulogi chicken quesadilla',
+                ingredients: ['any', 'something', 'bread'],
+                imagerecipe: Food9,
+            },
+            {
+                name: 'hong kong quesadilla',
+                ingredients: ['any', 'something', 'bread'],
+                imagerecipe: Food10,
+            },
+            {
+                name: 'thailand quesadilla',
+                ingredients: ['any', 'something', 'bread'],
+                imagerecipe: Food11,
+            },
+            {
+                name: 'spicy chicken quesadilla',
+                ingredients: ['any', 'something', 'bread'],
+                imagerecipe: Food12,
+            },
         ]
     },
     {
-        category: "Egg",
+        category: "Pasta",
+        image: Food5,
         recepies: [
             {
                 name: 'EGG Cake',
@@ -89,7 +128,8 @@ let Food1 = require('../../assets/crispy-fried-egg-recipe.png');
         ]       
     },
     {
-        category: 'Pear',
+        category: 'Cereals',
+        image: Food6,
         recepies: [
             {
                 name: 'Le Pear Cake',
@@ -101,44 +141,50 @@ let Food1 = require('../../assets/crispy-fried-egg-recipe.png');
             }
         ]
     },
-    {
-        category: 'Sanwich',
-        recepies: [
-            {
-                name: 'PB&J',
-                ingredients: ['huevo', 'carrot', 'sugar', 'spices', 'more huevos', 'plate']
-            },
-            {
-                name: 'HAM',
-                ingredients: ['any', 'something', 'huevo']
-            }
-        ]
-    },
-    {
-        category: 'bread',
-        recepies: [
-            {
-                name: 'bread Cake',
-                ingredients: ['milk', 'bread', 'sugar', 'spices', 'more bread', 'plate']
-            },
-            {
-                name: 'something else',
-                ingredients: ['any', 'something', 'bread']
-            }
-        ]
-    }
+    // {
+    //     category: 'Sanwich',
+    //     recepies: [
+    //         {
+    //             name: 'PB&J',
+    //             ingredients: ['huevo', 'carrot', 'sugar', 'spices', 'more huevos', 'plate']
+    //         },
+    //         {
+    //             name: 'HAM',
+    //             ingredients: ['any', 'something', 'huevo']
+    //         }
+    //     ]
+    // },
+    // {
+    //     category: 'bread',
+    //     recepies: [
+    //         {
+    //             name: 'bread Cake',
+    //             ingredients: ['milk', 'bread', 'sugar', 'spices', 'more bread', 'plate']
+    //         },
+    //         {
+    //             name: 'something else',
+    //             ingredients: ['any', 'something', 'bread']
+    //         }
+    //     ]
+    // }
 
 ])
 
 
   return (
-    <View style = {{flex: 1}}>
+    <View style = {{flex: 1, backgroundColor: 'white'}}>
         <FlatList
             data = {categories}
 
             ListHeaderComponent = {
                 <>
-                  <Text style = {{alignSelf: 'center'}}> Beginner </Text>
+                  <Text style = {{
+                        alignSelf: 'center',
+                        marginTop: 60,
+                        fontSize: 28,
+                        
+                    
+                    }}> Beginner </Text>
                 </>
               }
             columnWrapperStyle = {styles.row}
@@ -165,7 +211,9 @@ let Food1 = require('../../assets/crispy-fried-egg-recipe.png');
                     }} />
                   <Text style = {{
                             color: 'white', 
-                            alignSelf:'center',
+                            alignSelf:'flex-start',
+                            marginTop: 7,
+
                             
                                 }}> {item.category} </Text>
                 </TouchableOpacity>

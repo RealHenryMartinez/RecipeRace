@@ -1,5 +1,6 @@
 import React from 'react'
-import {Text, View, TouchableHighlight, TouchableOpacity, FlatList, StyleSheet} from 'react-native'
+import {Text, View, TouchableHighlight, TouchableOpacity, FlatList, StyleSheet, Image} from 'react-native'
+import BeginnerCard from '../../Cards/BeginnerCard';
 import VideoCard from '../../Cards/VideoCard'
 // import { FlatList } from 'react-native-web'
 // import { View } from 'react-native-web'
@@ -7,6 +8,12 @@ import VideoCard from '../../Cards/VideoCard'
 
 
 const Beginner = ({navigation}) => {
+
+// ADDING FOOD OPTIONS FOR THE FOOD CATEGORY
+let Food1 = require('../../assets/Food/crispy-fried-egg-recipe 1.png');
+
+
+
     const [categories, setCategories] = React.useState([
     {
         
@@ -14,7 +21,8 @@ const Beginner = ({navigation}) => {
         recepies: [
             {
                 name: 'EGG Cake',
-                ingredients: ['milk', 'carrot', 'sugar', 'spices', 'more carrots', 'plate'],   
+                ingredients: ['milk', 'carrot', 'sugar', 'spices', 'more carrots', 'plate'],
+                image: Food1,
                 video: "8PhdfcX9tG0",
                 recipe: ["1. Begin to cook", "2. Begin to boil"],
             },
@@ -121,6 +129,7 @@ const Beginner = ({navigation}) => {
 
 ])
 
+
   return (
     <View style = {{flex: 1}}>
         <FlatList
@@ -138,6 +147,7 @@ const Beginner = ({navigation}) => {
                     style = {{backgroundColor: 'grey', height: 100, width: 100, borderRadius: 20}}
                     onPress = {() => navigation.navigate('FoodList', item)}>
                   {/* Display the name of the category ons the top of the screen */}
+                  {/* <Image source= { item.image } /> */}
                   <Text style = {{color: 'white', alignSelf:'center'}}> {item.category} </Text>
                 </TouchableOpacity>
               )}

@@ -11,7 +11,14 @@ const RecipeListScreen = ({navigation, route}) => {
             {route.params.name}
         </Text> */}
 
-        <Text style={{alignSelf: 'center', marginTop: 50, fontSize: 25, width: 250, textAlign: 'center'}}>Ingredients you'll Need</Text>
+        <Text style={{
+            alignSelf: 'center',
+            marginTop: 50,
+            fontSize: 25,
+            width: 250,
+            textAlign: 'center',
+            marginBottom: 20,
+          }}>Ingredients you'll Need</Text>
 
         <FlatList 
             style = {{alignContent: 'center', textAlign: 'center'}}
@@ -38,12 +45,18 @@ const RecipeListScreen = ({navigation, route}) => {
         <View style = {{alignSelf:'center' }}>
           <TouchableOpacity 
                 style = {{
-                  backgroundColor: 'grey',
-                  height: 50,
-                  width: 100,
-                  borderRadius: 20,
+                  width: 234,
+                  alignItems: 'center',
+                  height: 64,
+                  borderRadius: 15,
+                  elevation: 1,
+                  justifyContent: "center",
+                  alignItems: 'center',
+                  flexDirection: 'row',
+                  display: 'flex',
+                  backgroundColor: '#5BBEB3',
                   marginBottom: 250,
-                  
+
                 }}
                 onPress = {() => navigation.navigate('CookingOptions', route.params)}
                 >

@@ -5,8 +5,10 @@ import VideoCard from '../../Cards/VideoCard'
 const VideoScreen = ({route, navigation, embedId}) => {
   console.log(route.params)
   return (
+    
     <View>
-      <VideoCard />
+      
+      <VideoCard style={{marginTop: 100}} />
     </View>
 
   )

@@ -14,6 +14,7 @@ import RecipeTextScreen from "../Screens/CookingOptions/RecipeTextScreen";
 
 import CookingOptionsScreen from "../Screens/CookingOptions/CookingOptionsScreen";
 import VideoCard from "../Cards/VideoCard";
+import CameraScreen from "../Screens/CameraShot/CameraScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -59,8 +60,13 @@ const AllHomeTabStack = () => {
       />
       <Stack.Screen
         // options={({ route }) => ({ title: route.params.title })}
-        name="RecipeText"
+        name="Step by Step"
         component={RecipeTextScreen}
+      />
+      <Stack.Screen
+        // options={({ route }) => ({ title: route.params.title })}
+        name="Submit"
+        component={CameraScreen}
       />
     </Stack.Navigator>
   );

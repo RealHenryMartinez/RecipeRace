@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, View, StyleSheet } from 'react-native'
+import { Button, View, StyleSheet, TouchableOpacity, Text } from 'react-native'
+
 
 
 // This is the functionality of the buttons 
@@ -17,10 +18,16 @@ const CookingOptionsCard = (props) => {
       };
 
   return (
-    <View>
-        <Button style={styles.container} onPress={handleDifficultyPress} title={props.optionName}/>
+    <>
+   
+    <View style={{marginTop: 100,}}>
+      
+        <TouchableOpacity style={styles.touch} onPress={handleDifficultyPress} title={props.optionName}>
+          <Text style={{color: 'white'}}>{props.optionName}</Text>
+        </TouchableOpacity>
         
     </View>
+  </>
   )
 }
 
@@ -40,6 +47,23 @@ const styles = StyleSheet.create({
           marginHorizontal: 10,
           flexDirection: 'row',
           display: 'flex',
+          
+          
 
+      },
+      touch: {
+        width: 234,
+        alignItems: 'center',
+        height: 64,
+        borderRadius: 15,
+        elevation: 1,
+        justifyContent: "center",
+        marginHorizontal: -20,
+        flexDirection: 'row',
+        display: 'flex',
+        backgroundColor: '#5BBEB3',
+        
+        
+  
       },
   });

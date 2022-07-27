@@ -10,6 +10,8 @@ const CookingOptionsScreen = ({ navigation, route }) => {
 
   return (
     <>
+     <Text style={styles.touch}>Choose option to cook from</Text>
+
     <View style={styles.space}>
         <CookingOptionsCard style={styles.buttonstyles} navigation={navigation} optionName="Both" data={route.params.video} dataTwo={route.params.recipe}/>
         
@@ -19,7 +21,7 @@ const CookingOptionsScreen = ({ navigation, route }) => {
         
     </View>
     <View style={styles.space}>
-        <CookingOptionsCard style={styles.buttonstyles} navigation={navigation} optionName="RecipeText" data={route.params.video} dataTwo={route.params.recipe}/>
+        <CookingOptionsCard style={styles.buttonstyles} navigation={navigation} optionName="Step by Step" data={route.params.video} dataTwo={route.params.recipe}/>
         
     </View>
     </>
@@ -37,9 +39,26 @@ const styles = StyleSheet.create({
     space: {
         height: 200,
         width: 234,
-        marginBottom: 20,
+        marginBottom: -100,
         padding: 20,
         alignSelf: 'center'
-    }
+    },
+    touch: {
+        
+        justifyContent: "center",
+        alignItems: 'center',
+        flexDirection: 'row',
+        display: 'flex',
+        marginBottom: 10,
+        marginTop: 60,
+        alignSelf: 'center',
+        fontSize: 25,
+        width: 200,
+        alignItems: 'center',
+        textAlign: 'center',
+        
+    
+      },
+
   });
   

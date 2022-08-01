@@ -115,7 +115,15 @@ const Advance = ({navigation, route}) => {
 ])
 
   return (
+    <>
+    <TouchableOpacity 
+                    style = {{backgroundColor: 'grey', height: 128, width: 169, borderRadius: 20}}
+                    onPress = {() => navigation.navigate('FoodList', item)}>
+                  {/* Display the name of the category ons the top of the screen */}
+                  <Text style = {{color: 'white', alignSelf:'center'}}> </Text>
+                </TouchableOpacity>
     <View style = {{flex: 1}}>
+        
         <FlatList
             data = {categories}
             ListHeaderComponent = {
@@ -135,6 +143,7 @@ const Advance = ({navigation, route}) => {
               )}
         />
     </View>
+    </>
   )
 }
 

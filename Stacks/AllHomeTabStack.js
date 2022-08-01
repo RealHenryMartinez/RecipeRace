@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import RecipeListScreen from "../Screens/RecipeList/RecipeListScreen";
 import FoodListScreen from "../Screens/FoodList/FoodListScreen";
-import Difficulty from "../Screens/Difficulty/Difficulty";
+import DifficultyScreen from "../Screens/Difficulty/DifficultyScreen";
 import Beginner from "../Screens/Difficulty/Beginner";
 import Intermediate from "../Screens/Difficulty/Intermediate";
 import Advance from "../Screens/Difficulty/Advance";
@@ -15,6 +15,7 @@ import RecipeTextScreen from "../Screens/CookingOptions/RecipeTextScreen";
 import CookingOptionsScreen from "../Screens/CookingOptions/CookingOptionsScreen";
 import VideoCard from "../Cards/VideoCard";
 import CameraScreen from "../Screens/CameraShot/CameraScreen";
+import ChooseLandOption from "../Screens/Pets/ChooseLandOption";
 
 const Stack = createNativeStackNavigator();
 
@@ -25,8 +26,8 @@ const Stack = createNativeStackNavigator();
 const AllHomeTabStack = () => {
   return (
     // HERE IS ALL THE "STACK TABS" for each part of the HOME TAB //
-    <Stack.Navigator>
-      <Stack.Screen name="Difficulty" component={Difficulty}  />
+    <Stack.Navigator style={{backgroundColor: 'white'}}>
+      <Stack.Screen style={{backgroundColor: 'white'}} name="Difficulty" component={DifficultyScreen}  />
       <Stack.Screen name="Beginner" component={Beginner} />
       <Stack.Screen name="Intermediate" component={Intermediate} />
       <Stack.Screen name="Advance" component={Advance} />
@@ -68,7 +69,15 @@ const AllHomeTabStack = () => {
         name="Submit"
         component={CameraScreen}
       />
+      <Stack.Screen
+      // options={({ route }) => ({ title: route.params.title })}
+      name="Choose"
+      component={ChooseLandOption}
+    />
+
+      
     </Stack.Navigator>
+
   );
 };
 

@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import AllHomeTabStack from './Stacks/AllHomeTabStack';
 import CameraScreen from './Screens/CameraShot/CameraScreen';
+import LeaderboardScreen from './Screens/Leaderboard/LeaderboardScreen';
 
 const Tabs = createBottomTabNavigator();
 
@@ -14,10 +15,10 @@ export default function App() {
 
 // tabs are going to be located here
     <NavigationContainer>
-        <Tabs.Navigator initialRouteName="Difficulty">
+        <Tabs.Navigator initialRouteName="Home">
           <Tabs.Screen
             options={{ headerShown: false }} // hides 'Home' header
-            name="Difficulty"
+            name="Home"
             component={AllHomeTabStack}
           />
 
@@ -25,6 +26,11 @@ export default function App() {
             options={{ headerShown: false }} // hides 'Home' header
             name="Camera"
             component={CameraScreen}
+          />
+          <Tabs.Screen
+            options={{ headerShown: false }} // hides 'Home' header
+            name="Leaderboard"
+            component={LeaderboardScreen}
           />
         </Tabs.Navigator>
       </NavigationContainer>

@@ -9,39 +9,43 @@ import VideoCard from '../../Cards/VideoCard'
 
 const Beginner = ({navigation}) => {
 
-// ADDING CATEGORY FOOD IMAGES
-let Food1 = require('../../assets/crispy-fried-egg-recipe.png');
-let Food2 = require('../../assets/ceviche-de-camaron.png');
-let Food3 = require('../../assets/Molé.png');
-let Food4 = require('../../assets/Quesadilla.png');
-let Food5 = require('../../assets/Creamy-Tomato-Spinach-Pasta-close.png');
-let Food6 = require('../../assets/cereal.png');
+// FoodList IMAGES
+let Food1 = require('../../assets/RegularQ.png');
+let Food2 = require('../../assets/VeganQ.png');
+let Food3 = require('../../assets/RegularEgg.png');
+let Food4 = require('../../assets/VeganEgg.png');
+let Food5 = require('../../assets/RegularS.jpeg');
+let Food6 = require('../../assets/VeganS.png');
+let Food7 = require('../../assets/RegularSalad.jpeg');
+let Food8 = require('../../assets/VeganSalad.png');
+let Food9 = require('../../assets/VeganFriedRice.png');
 
-// ADDING FOOD IMAGES FOR FOOD LIST
-let Food7 = require('../../assets/Oaxaca-M-Q.png');
-let Food8 = require('../../assets/basic-Q.png');
-let Food9 = require('../../assets/fancy-Q.png');
-let Food10 = require('../../assets/cali-mex-quesadillas.png');
-let Food11 = require('../../assets/Veggie-Q.png');
-let Food12 = require('../../assets/spicy-chicken-quesadilla-menuitem.png');
+
+// ADDING FOOD IMAGES FOR CATEGORIES
+// let Food7 = require('../../assets/Oaxaca-M-Q.png');
+// let Food8 = require('../../assets/basic-Q.png');
+// let Food9 = require('../../assets/fancy-Q.png');
+// let Food10 = require('../../assets/cali-mex-quesadillas.png');
+// let Food11 = require('../../assets/Veggie-Q.png');
+// let Food12 = require('../../assets/spicy-chicken-quesadilla-menuitem.png');
 
 
 // ADDING FOOD OPTIONS FOR THE FOOD CATEGORY
     const [categories, setCategories] = React.useState([
     {
         
-        category: "Egg",
+        category: "Quesadilla",
         image: Food1,
         recepies: [
             {
-                name: 'EGG Cake',
+                name: '',
                 ingredients: ['milk', 'carrot', 'sugar', 'spices', 'more carrots', 'plate'],
                 
                 video: "8PhdfcX9tG0",
                 recipe: ["1. Begin to cook", "2. Begin to boil"],
             },
             {
-                name: 'rice and eggs',
+                name: '',
                 ingredients: ['any', 'something', 'carrot'],
                 video: "rokGy0huYEA",
                 recipe: ["1. Begin to cook", "2. Begin to boil"],
@@ -49,7 +53,7 @@ let Food12 = require('../../assets/spicy-chicken-quesadilla-menuitem.png');
         ]       
     },
     {
-        category: 'Ceviche',
+        category: 'Egg',
         image: Food2,
         recepies: [
             {
@@ -64,7 +68,7 @@ let Food12 = require('../../assets/spicy-chicken-quesadilla-menuitem.png');
         ]
     },
     {
-        category: 'Molé',
+        category: 'Spagetti',
         image: Food3,
         recepies: [
             {
@@ -78,41 +82,20 @@ let Food12 = require('../../assets/spicy-chicken-quesadilla-menuitem.png');
         ]
     },
     {
-        category: 'Quesadillas',
+        category: 'Salad',
         image: Food4,
         recepies: [
             {
-                name: 'oaxaca quesadilla',
+                name: 'Vegan Cheesy Quesadilla',
                 ingredients: ['milk', 'bread', 'sugar', 'spices', 'more bread', 'plate'],
                 imagerecipe: Food7,
             },
             {
-                name: 'cheese quesadilla',
+                name: 'Classic Quesadilla',
                 ingredients: ['any', 'something', 'bread'],
                 imagerecipe: Food8,
             },
-            {
-                name: 'bulogi chicken quesadilla',
-                ingredients: ['any', 'something', 'bread'],
-                imagerecipe: Food9,
-            },
-            {
-                name: 'hong kong quesadilla',
-                ingredients: ['any', 'something', 'bread'],
-                imagerecipe: Food10,
-            },
-            {
-                name: 'thailand quesadilla',
-                ingredients: ['any', 'something', 'bread'],
-                imagerecipe: Food11,
-                video: "8PhdfcX9tG0",
-                recipe: ["1. Begin to cook", "2. Begin to boil"],
-            },
-            {
-                name: 'spicy chicken quesadilla',
-                ingredients: ['any', 'something', 'bread'],
-                imagerecipe: Food12,
-            },
+            
         ]
     },
     {

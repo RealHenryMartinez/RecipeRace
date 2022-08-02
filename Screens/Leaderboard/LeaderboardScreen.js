@@ -85,10 +85,11 @@ const LeaderboardScreen = () => {
               borderTopWidth: 1,
               borderBottomWidth: 1,
               borderRightWidth: 1,
-              borderLeftWidth: 1,
+              // borderLeftWidth: 1,
               width: 325,
               height: 105,
               marginBottom: 13,
+              borderRadius: 20,
               
             }}
           >
@@ -103,8 +104,11 @@ const LeaderboardScreen = () => {
                 style={{
                   width: 15,
                   backgroundColor: item.color,
-                  borderRightWidth: 1,
+                  // borderRightWidth: 1,
+                  borderWidth: 1,
                   height: "100%",
+                  borderTopLeftRadius: 20,
+                  borderBottomLeftRadius: 20,
                 }}
               />
               <Image style={{ height: 50, width: 50, marginLeft: 20, marginTop: 20,  }} source={item.image} />

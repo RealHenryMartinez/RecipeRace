@@ -20,6 +20,12 @@ export default function App() {
     <NavigationContainer>
         <Tabs.Navigator initialRouteName="Home">
           <Tabs.Screen
+            // options={{ headerShown: false, tabBarIcon: ({size, color}) => (<Icon icon="emojione:cooking" inline={true} />) }} // hides 'Home' header
+
+            name="Leaderboard"
+            component={LeaderboardScreen}
+          />
+          <Tabs.Screen
             options={{ headerShown: false }} // hides 'Home' header
             name="Home"
             
@@ -27,18 +33,13 @@ export default function App() {
           />
 
           
+          
           <Tabs.Screen
-            // options={{ headerShown: false, tabBarIcon: ({size, color}) => (<Icon icon="emojione:cooking" inline={true} />) }} // hides 'Home' header
-
-            name="Leaderboard"
-            component={LeaderboardScreen}
-          />
-          {/* <Tabs.Screen
             // options={{ headerShown: false, tabBarIcon: ({size, color}) => (<Icon icon="emojione:cooking" inline={true} />) }} // hides 'Home' header
 
             name="Profile"
             component={AllProfileStack}
-          /> */}
+          />
         </Tabs.Navigator>
       </NavigationContainer>
 

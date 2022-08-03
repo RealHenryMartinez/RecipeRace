@@ -59,34 +59,31 @@ export default function CameraScreen() {
   }, []);
 
   // simulating a POSTMAN API into your server
-  const upload = async (base64) => {
+  const upload = async () => {
     try {
-      console.log(base64);
-      // create form data for image
-      const data = new FormData();
+      let localUri = photo.uri;
+      let filename = localUri.split("/").pop();
 
-      // convert base64 image to Blob
-      const blobRes = await fetch(base64);
-      // blob object
-      const blob = await blobRes.blob();
+      let match = /\.(\w+)$/.exec(filename);
+      let type = match ? `image/${match[1]}` : `image`;
 
-      // add image blob to key pairs
-      // getting the image ready for delivery to the server
-      data.append("file", blob);
+      let formData = new FormData();
+      formData.append("file", { uri: localUri, name: filename, type });
 
-      const config = {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      };
-
-      // post your image to a data base which is your server
-      const response = await axios.post(
+      const response = await fetch(
         "https://reciperace.herokuapp.com/upload",
-        data, config
+        {
+          method: "POST",
+          body: formData,
+          header: {
+            "content-type": "multipart/form-data",
+          },
+        }
       );
 
-      console.log(response);
+      const labels = await response.json();
+
+      console.log(JSON.stringify(labels))
     } catch (e) {
       console.log(e);
     }
@@ -134,7 +131,7 @@ export default function CameraScreen() {
         }
         setPhoto(undefined);
         // send photo to server
-        upload(photo.base64);
+        upload();
       });
     };
 
@@ -215,3 +212,5 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
   },
 });
+
+

@@ -4,7 +4,7 @@ import { Text, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-nativ
 
 const FoodListScreen = ({navigation, route}) => {
 
-  console.log(route.params.category)
+
   return (
     // Food Lists that one can cook
     <>

@@ -19,7 +19,7 @@ const RecipeListScreen = ({navigation, route}) => {
             width: 250,
             textAlign: 'center',
             marginBottom: 20,
-          }}>Ingredients you'll Need</Text>
+          }}>Ingredients for Dish</Text>
 
         <FlatList 
             style = {{alignContent: 'center', textAlign: 'center'}}
@@ -32,7 +32,32 @@ const RecipeListScreen = ({navigation, route}) => {
                     {/* Display the name of the ingredients ons the top of the screen */}
                     <Text style = {{
                         color: 'black',
-                        fontWeight: 'bold',
+                        
+                        alignSelf: 'center'
+                        
+
+                      
+                      }}> {item} </Text>
+                    
+                </View>
+                
+              )} 
+        />
+        <Text style={{textAlign: 'center', fontSize: 25, }}>Equipment</Text>
+        <FlatList 
+            style = {{alignContent: 'center', textAlign: 'center'}}
+            
+    // Route.params.ingredients is going to the child of the route onto it reaches ingredients
+            data = {route.params.equipment}
+            
+            renderItem={({ item }) => (
+
+                <View>
+                    
+                    {/* Display the name of the ingredients ons the top of the screen */}
+                    <Text style = {{
+                        color: 'black',
+                        
                         alignSelf: 'center'
                         
 
@@ -56,7 +81,7 @@ const RecipeListScreen = ({navigation, route}) => {
                   flexDirection: 'row',
                   display: 'flex',
                   backgroundColor: '#5BBEB3',
-                  marginBottom: 250,
+                  marginBottom: 120,
 
                 }}
                 onPress = {() => navigation.navigate('CookingOptions', route.params)}

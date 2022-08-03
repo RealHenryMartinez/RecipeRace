@@ -85,6 +85,8 @@ export default function CameraScreen() {
 
       console.log(JSON.stringify(labels))
     } catch (e) {
+       
+      
       console.log(e);
     }
   };

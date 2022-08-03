@@ -10,14 +10,24 @@ import VideoCard from '../../Cards/VideoCard'
 const Beginner = ({navigation}) => {
 
 // FoodList IMAGES
+
+// quesadilla
 let Food1 = require('../../assets/RegularQ.png');
 let Food2 = require('../../assets/VeganQ.png');
+
+// egg
 let Food3 = require('../../assets/RegularEgg.png');
 let Food4 = require('../../assets/VeganEgg.png');
+
+// spagetti
 let Food5 = require('../../assets/RegularS.jpeg');
 let Food6 = require('../../assets/VeganS.png');
+
+// salad
 let Food7 = require('../../assets/RegularSalad.jpeg');
 let Food8 = require('../../assets/VeganSalad.png');
+
+// rice
 let Food9 = require('../../assets/VeganFriedRice.png');
 
 
@@ -83,17 +93,41 @@ let Food9 = require('../../assets/VeganFriedRice.png');
     },
     {
         category: 'Salad',
-        image: Food4,
+        image: "lol",
         recepies: [
+            
             {
-                name: 'Vegan Cheesy Quesadilla',
-                ingredients: ['milk', 'bread', 'sugar', 'spices', 'more bread', 'plate'],
-                imagerecipe: Food7,
+                name: 'Regular Salad',
+                ingredients: ["2 English cucumbers (sliced thinly)",
+                    "pinch of salt",
+                    "1 red onion (sliced thinly)",
+                    "1/2 cup water",
+                    "1 cup vinegar (distilled)",
+                    "1/2 cup granulated sugar",
+                    "2 1/2 tbsp fresh dill (minced)"],
+                equipment: ["N/A"],
+                imagerecipe: Food8,
             },
             {
-                name: 'Classic Quesadilla',
-                ingredients: ['any', 'something', 'bread'],
-                imagerecipe: Food8,
+                name: 'Vegan Salad',
+                ingredients: ["900g new potatoes",
+                "2 celery sticks",
+                "1 red pepper",
+                "8 spring onions",
+                "8 small pickled gherkins",
+                "4 tbsp capers",
+                "1 lemon",
+                "10g fresh dill",
+                "10g fresh parsley",
+                "10g fresh mint",
+                "10g fresh coriander",
+                "125g egg free mayo",
+                "3/4 tsp salt plus extra",],
+                equipment:
+                ["Large pan",
+                "Large mixing bowl",],
+            
+                imagerecipe: Food7,
             },
             
         ]
@@ -126,33 +160,6 @@ let Food9 = require('../../assets/VeganFriedRice.png');
             }
         ]
     },
-    // {
-    //     category: 'Sanwich',
-    //     recepies: [
-    //         {
-    //             name: 'PB&J',
-    //             ingredients: ['huevo', 'carrot', 'sugar', 'spices', 'more huevos', 'plate']
-    //         },
-    //         {
-    //             name: 'HAM',
-    //             ingredients: ['any', 'something', 'huevo']
-    //         }
-    //     ]
-    // },
-    // {
-    //     category: 'bread',
-    //     recepies: [
-    //         {
-    //             name: 'bread Cake',
-    //             ingredients: ['milk', 'bread', 'sugar', 'spices', 'more bread', 'plate']
-    //         },
-    //         {
-    //             name: 'something else',
-    //             ingredients: ['any', 'something', 'bread']
-    //         }
-    //     ]
-    // }
-
 ])
 
 

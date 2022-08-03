@@ -67,6 +67,7 @@ export default function CameraScreen() {
 
       // convert base64 image to Blob
       const blobRes = await fetch(base64);
+
       // blob object
       const blob = await blobRes.blob();
 
@@ -86,8 +87,11 @@ export default function CameraScreen() {
         data, config
       );
 
+      
       console.log(response);
     } catch (e) {
+       
+      
       console.log(e);
     }
   };
@@ -134,7 +138,8 @@ export default function CameraScreen() {
         }
         setPhoto(undefined);
         // send photo to server
-        upload(photo.base64);
+
+        upload(photo.uri);
       });
     };
 

@@ -12,7 +12,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Camera } from "expo-camera";
 import { shareAsync } from "expo-sharing";
 import * as MediaLibrary from "expo-media-library";
-import axios, { Axios } from "axios";
+import axios from "axios";
 
 // fixing camera reloading issue
 import { useIsFocused } from "@react-navigation/native";
@@ -61,11 +61,11 @@ export default function CameraScreen() {
   // simulating a POSTMAN API into your server
   const upload = async (base64) => {
     try {
+      console.log(base64);
       // create form data for image
-
       const data = new FormData();
 
-      // convert base64 image to Blob 
+      // convert base64 image to Blob
       const blobRes = await fetch(base64);
       // blob object
       const blob = await blobRes.blob();
@@ -76,14 +76,14 @@ export default function CameraScreen() {
 
       const config = {
         headers: {
-          "content-type": "multipart/form-data",
+          "Content-Type": "multipart/form-data",
         },
       };
-// post your image to a data base which is your server 
+
+      // post your image to a data base which is your server
       const response = await axios.post(
-        "http://localhost3001/upload",
-        data,
-        config
+        "https://reciperace.herokuapp.com/upload",
+        data, config
       );
 
       console.log(response);
@@ -112,7 +112,7 @@ export default function CameraScreen() {
     };
     // wait until picture is taken, then create a "new photo file"
     let newPhoto = await cameraRef.current.takePictureAsync(options);
-    
+
     setPhoto(newPhoto);
   };
 
